@@ -14,7 +14,7 @@ Files use a custom **Design Canvas** format powered by `support.js`:
 - `<helmet>` block inside `<x-dc>` maps to `<head>` (stylesheets, scripts).
 - Templating: `{{ expression }}` for bindings, `<sc-if value="{{ expr }}">` for conditionals.
 - Event handlers: `onClick="{{ handlerName }}"`.
-- `support.js` is **generated** — do not edit it directly. It is rebuilt with `cd dc-runtime && bun run build`.
+- `support.js` is **generated** — do not edit it directly.
 
 ## Design system: Sapien (Darwinbox SDS)
 
@@ -35,13 +35,30 @@ All styling uses the **Sapien Design System** loaded from `_ds/sapien-design-sys
 
 | File | Purpose |
 |------|---------|
-| `Mehai Capital.dc.html` | Main landing page |
-| `Mehai Capital-print.dc.html` | Print/PDF variant |
-| `mehai-leak-test (1/2).html` | Experimental/test variants |
+| `index.html` | Main landing page (DC format, uses `<x-dc>`) |
+| `mehai-leak-test (1).html` | Self-contained mutual-fund fee-gap diagnostic widget |
+| `mehai-leak-test (2).html` | Second variant of the leak-test widget |
 | `support.js` | DC runtime — do not edit |
 | `_ds/.../tokens.css` | All SDS design tokens |
 | `_ds/.../_ds_bundle.js` | SDS component bundle |
 
+## Brand token aliases
+
+`index.html` defines Mehai-specific CSS variables at the root element that alias SDS globals:
+
+```css
+--navy:      var(--gl-blue-900)   /* primary brand dark */
+--emerald:   var(--gl-green-500)  /* primary brand accent */
+--emerald-d: var(--gl-green-600)  /* accent hover */
+--ink:       var(--gl-charcoal-500)
+--line:      var(--gl-charcoal-50)
+--gold:      var(--gl-yellow-500)
+```
+
+Use these aliases within `index.html` rather than reaching for raw globals.
+
 ## Viewing the site
 
-Open `Mehai Capital.dc.html` directly in a browser — no local server needed. The `support.js` runtime bootstraps the `<x-dc>` template on page load.
+Open `index.html` directly in a browser — no local server needed. The `support.js` runtime bootstraps the `<x-dc>` template on page load.
+
+The site is deployed on GitHub Pages (see `CNAME` and `.nojekyll`).

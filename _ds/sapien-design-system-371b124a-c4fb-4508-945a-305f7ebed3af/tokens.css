@@ -1,0 +1,360 @@
+/* ──────────────────────────────────────────────────────────────
+   Sapien Design System — Tokens
+   Two-tier system:
+     1. Global tokens   gl_colors-brand-{name}-{step}
+     2. Alias tokens    {bg|text|border|icon|theme}-{role}-{state}
+   Always reference alias tokens in product code; reach for global
+   only when no alias fits.
+   ────────────────────────────────────────────────────────────── */
+
+/* Darwin Sans */
+@font-face { font-family: "Darwin Sans"; src: url("fonts/DarwinSans-Light_.otf")        format("opentype"); font-weight: 300; font-style: normal;  font-display: swap; }
+@font-face { font-family: "Darwin Sans"; src: url("fonts/DarwinSans-Book.otf")          format("opentype"); font-weight: 400; font-style: normal;  font-display: swap; }
+@font-face { font-family: "Darwin Sans"; src: url("fonts/DarwinSans-Book_Italic.otf")   format("opentype"); font-weight: 400; font-style: italic;  font-display: swap; }
+@font-face { font-family: "Darwin Sans"; src: url("fonts/DarwinSans-Medium.otf")        format("opentype"); font-weight: 500; font-style: normal;  font-display: swap; }
+@font-face { font-family: "Darwin Sans"; src: url("fonts/DarwinSans-Medium_Italic.otf") format("opentype"); font-weight: 500; font-style: italic;  font-display: swap; }
+@font-face { font-family: "Darwin Sans"; src: url("fonts/DarwinSans-_Bold_.otf")        format("opentype"); font-weight: 700; font-style: normal;  font-display: swap; }
+@font-face { font-family: "Darwin Sans"; src: url("fonts/DarwinSans-ExtraBold.otf")     format("opentype"); font-weight: 800; font-style: normal;  font-display: swap; }
+
+:root {
+  /* ──────── 1 · GLOBAL TOKENS ──────── */
+
+  /* Charcoal — Primary action + typography */
+  --gl-charcoal-700: #131313;
+  --gl-charcoal-600: #1A1A1A;
+  --gl-charcoal-500: #202020;
+  --gl-charcoal-400: #4D4D4D;
+  --gl-charcoal-300: #797979;
+  --gl-charcoal-200: #A6A6A6;
+  --gl-charcoal-100: #D2D2D2;
+  --gl-charcoal-50:  #E9E9E9;
+  --gl-charcoal-20:  #F2F2F2;
+  --gl-charcoal-10:  #F6F6F6;
+  --gl-charcoal-500-48: rgba(32, 32, 32, 0.48);
+  --gl-charcoal-500-16: rgba(32, 32, 32, 0.16);
+  --gl-charcoal-500-8:  rgba(32, 32, 32, 0.08);
+
+  /* White — Inverse primary */
+  --gl-white-500: #FFFFFF;
+
+  /* Blue — Interactive / info */
+  --gl-blue-900: #00182E;
+  --gl-blue-850: #01284D;
+  --gl-blue-800: #01376B;
+  --gl-blue-700: #014F99;
+  --gl-blue-600: #0169CC;
+  --gl-blue-500: #0183FF;
+  --gl-blue-400: #349CFF;
+  --gl-blue-300: #67B5FF;
+  --gl-blue-200: #99CDFF;
+  --gl-blue-100: #CCE6FF;
+  --gl-blue-50:  #E6F3FF;
+  --gl-blue-20:  #F0F8FF;
+  --gl-blue-10:  #F5FAFF;
+
+  /* Green — Success */
+  --gl-green-900: #002010;
+  --gl-green-850: #003118;
+  --gl-green-800: #004120;
+  --gl-green-700: #006131;
+  --gl-green-600: #008241;
+  --gl-green-500: #00A251;
+  --gl-green-400: #33B574;
+  --gl-green-300: #66C797;
+  --gl-green-200: #99DAB9;
+  --gl-green-100: #CCECDC;
+  --gl-green-50:  #E5F6EE;
+  --gl-green-20:  #EEFEF7;
+  --gl-green-10:  #F1FFF9;
+
+  /* Red — Error / danger */
+  --gl-red-900: #330707;
+  --gl-red-850: #4D0B0B;
+  --gl-red-800: #660E0E;
+  --gl-red-700: #991515;
+  --gl-red-600: #CC1C1C;
+  --gl-red-500: #FF2323;
+  --gl-red-400: #FF4F4F;
+  --gl-red-300: #FF7B7B;
+  --gl-red-200: #FFA7A7;
+  --gl-red-100: #FFD3D3;
+  --gl-red-50:  #FFE9E9;
+  --gl-red-20:  #FFF5F5;
+  --gl-red-10:  #FFFBFB;
+
+  /* Yellow — Warning */
+  --gl-yellow-900: #191100;
+  --gl-yellow-850: #382500;
+  --gl-yellow-800: #6B4700;
+  --gl-yellow-700: #A36D00;
+  --gl-yellow-600: #D68F00;
+  --gl-yellow-500: #FFAD0D;
+  --gl-yellow-400: #FFBE3D;
+  --gl-yellow-300: #FFCF70;
+  --gl-yellow-200: #FFDF9E;
+  --gl-yellow-100: #FFF0D1;
+  --gl-yellow-50:  #FFF7E5;
+
+  /* Custom / theme ramps — used by Smart Theme */
+  --gl-theme-blue-500: #0183FF;
+  --gl-theme-amberBlue-500: #5348D7;
+  --gl-theme-coralRed-500: #F46868;
+  --gl-theme-crimsonRed-500: #D7263D;
+  --gl-theme-green-500: #00A251;
+  --gl-theme-violet-500: #7E3FF2;
+  --gl-theme-teal-500: #00A99D;
+  --gl-theme-grey-500: #4D4D4D;
+
+  /* ──────── 2 · ALIAS TOKENS ──────── */
+
+  /* Background — Primary (Charcoal-driven) */
+  --bg-primary-disabled: var(--gl-charcoal-50);
+  --bg-primary-default:  var(--gl-charcoal-100);
+  --bg-primary-hover:    var(--gl-charcoal-400);
+  --bg-primary-active:   var(--gl-charcoal-500);
+  --bg-primary-readOnly: var(--gl-charcoal-300);
+  --bg-primary-ripple:   var(--gl-charcoal-700);
+  --bg-primary-full:     var(--gl-charcoal-700);
+  --bg-primary-negative: var(--gl-white-500);
+
+  /* Background — Secondary (lighter charcoal) */
+  --bg-secondary-default:       var(--gl-charcoal-100);
+  --bg-secondary-hover:         var(--gl-charcoal-50);
+  --bg-secondary-pressed:       var(--gl-charcoal-100);
+  --bg-secondary-active:        var(--gl-charcoal-50);
+  --bg-secondary-activeHover:   var(--gl-charcoal-200);
+  --bg-secondary-disabled:      var(--gl-charcoal-50);
+  --bg-secondary-disabledHover: var(--gl-charcoal-50);
+  --bg-secondary-readOnly:      var(--gl-charcoal-300);
+  --bg-secondary-negative:      var(--gl-white-500);
+
+  /* Background — Neutral Grey (page surfaces) */
+  --bg-neutralGrey-light1:   var(--gl-charcoal-10);
+  --bg-neutralGrey-light2:   var(--gl-charcoal-10);   /* page bg */
+  --bg-neutralGrey-light3:   var(--gl-charcoal-20);
+  --bg-neutralGrey-light4:   var(--gl-charcoal-50);
+  --bg-neutralGrey-light10:  var(--gl-charcoal-400);
+  --bg-neutralGrey-default:  var(--gl-charcoal-100);
+  --bg-neutralGrey-hover:    var(--gl-charcoal-50);
+  --bg-neutralGrey-pressed:  var(--gl-charcoal-50);
+  --bg-neutralGrey-disabled: var(--gl-charcoal-50);
+  --bg-neutralGrey-readOnly: var(--gl-charcoal-300);
+
+  /* Background — Neutral Blue (interactive surfaces) */
+  --bg-neutralBlue-light1:        var(--gl-blue-100);
+  --bg-neutralBlue-default:       var(--gl-blue-20);
+  --bg-neutralBlue-hover:         var(--gl-blue-50);
+  --bg-neutralBlue-pressed:       var(--gl-blue-50);
+  --bg-neutralBlue-active:        var(--gl-blue-500);
+  --bg-neutralBlue-activeHover:   var(--gl-blue-600);
+  --bg-neutralBlue-activePressed: var(--gl-blue-700);
+  --bg-neutralBlue-disabled:      var(--gl-blue-100);
+  --bg-neutralBlue-disabledHover: var(--gl-blue-50);
+
+  /* Background — Neutral White */
+  --bg-neutralWhite-default: var(--gl-white-500);
+
+  /* Background — Neutral Charcoal (inverse) */
+  --bg-neutralCharcoal-default: var(--gl-charcoal-500);
+  --bg-neutralCharcoal-hover:   var(--gl-charcoal-400);
+  --bg-neutralCharcoal-pressed: var(--gl-charcoal-700);
+
+  /* Background — Overlay */
+  --bg-overlay-blanket: var(--gl-charcoal-500-48);
+
+  /* Background — Feedback */
+  --bg-feedback-successHigh: var(--gl-green-500);
+  --bg-feedback-successMid:  var(--gl-green-200);
+  --bg-feedback-successLow:  var(--gl-green-50);
+  --bg-feedback-errorHigh:   var(--gl-red-500);
+  --bg-feedback-errorMid:    var(--gl-red-200);
+  --bg-feedback-errorLow:    var(--gl-red-50);
+  --bg-feedback-warningHigh: var(--gl-yellow-500);
+  --bg-feedback-warningMid:  var(--gl-yellow-200);
+  --bg-feedback-warningLow:  var(--gl-yellow-50);
+  --bg-feedback-infoHigh:    var(--gl-blue-500);
+  --bg-feedback-infoMid:     var(--gl-blue-200);
+  --bg-feedback-infoLow:     var(--gl-blue-50);
+
+  /* Border */
+  --border-primary-lighter:   var(--gl-charcoal-100);
+  --border-primary-subtle:    var(--gl-charcoal-50);
+  --border-primary-disabled:  var(--gl-charcoal-50);
+  --border-primary-default:   var(--gl-charcoal-200);
+  --border-primary-readOnly:  var(--gl-charcoal-300);
+  --border-primary-full:      var(--gl-charcoal-500);
+  --border-primary-negative:  var(--gl-white-500);
+
+  --border-secondary-lighter:     var(--gl-blue-100);
+  --border-secondary-default:     var(--gl-blue-200);
+  --border-secondary-hover:       var(--gl-blue-300);
+  --border-secondary-pressed:     var(--gl-blue-50);
+  --border-secondary-disabled:    var(--gl-blue-50);
+  --border-secondary-active:      var(--gl-blue-500);
+  --border-secondary-activeHover: var(--gl-blue-700);
+
+  --border-neutralGrey-light1:  var(--gl-charcoal-10);
+  --border-neutralGrey-default: var(--gl-charcoal-100);
+  --border-neutralBlue-default: var(--gl-blue-200);
+  --border-neutralBlue-active:  var(--gl-blue-500);
+
+  --border-feedback-success: var(--gl-green-500);
+  --border-feedback-error:   var(--gl-red-500);
+  --border-feedback-warning: var(--gl-yellow-500);
+  --border-feedback-info:    var(--gl-blue-500);
+
+  /* Text */
+  --text-neutral-title:      var(--gl-charcoal-500);
+  --text-neutral-default:    var(--gl-charcoal-500);
+  --text-neutral-secondary:  var(--gl-charcoal-400);
+  --text-neutral-muted:      var(--gl-charcoal-300);
+  --text-neutral-disabled:   var(--gl-charcoal-200);
+  --text-neutral-placeholder:var(--gl-charcoal-300);
+  --text-neutral-onBrand:    var(--gl-white-500);
+  --text-neutral-link:       var(--gl-blue-500);
+  --text-neutral-linkHover:  var(--gl-blue-600);
+
+  --text-feedback-success: var(--gl-green-700);
+  --text-feedback-error:   var(--gl-red-700);
+  --text-feedback-warning: var(--gl-yellow-700);
+  --text-feedback-info:    var(--gl-blue-700);
+
+  /* Icon */
+  --icon-neutralGrey-default:  var(--gl-charcoal-400);
+  --icon-neutralGrey-muted:    var(--gl-charcoal-300);
+  --icon-neutralGrey-disabled: var(--gl-charcoal-200);
+  --icon-neutralBlue-default:  var(--gl-blue-500);
+  --icon-onBrand:              var(--gl-white-500);
+
+  /* Theme (runtime-swappable for Smart Theme) */
+  --theme-bg-active:        var(--gl-blue-500);
+  --theme-bg-activeHover:   var(--gl-blue-600);
+  --theme-bg-activePressed: var(--gl-blue-700);
+  --theme-bg-soft:          var(--gl-blue-50);
+  --theme-text-active:      var(--gl-blue-500);
+  --theme-border-active:    var(--gl-blue-500);
+  --theme-icon-active:      var(--gl-blue-500);
+
+  /* ──────── TYPE SCALE ──────── */
+  --font-family-base: "Darwin Sans", "Mulish", "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+  --font-family-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --font-weight-light:     300;
+  --font-weight-book:      400;
+  --font-weight-medium:    500;
+  --font-weight-bold:      700;
+  --font-weight-extrabold: 800;
+
+  --font-size-display:  56px;  --line-height-display:  64px;
+  --font-size-title-l:  40px;  --line-height-title-l:  48px;
+  --font-size-title-m:  28px;  --line-height-title-m:  36px;
+  --font-size-title-s:  20px;  --line-height-title-s:  28px;
+  --font-size-body-l:   16px;  --line-height-body-l:   24px;
+  --font-size-body-m:   14px;  --line-height-body-m:   20px;
+  --font-size-body-s:   13px;  --line-height-body-s:   18px;
+  --font-size-caption:  12px;  --line-height-caption:  16px;
+
+  /* ──────── SPACING (8-pt grid) ──────── */
+  --space-2:  2px;
+  --space-4:  4px;
+  --space-6:  6px;
+  --space-8:  8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-56: 56px;
+  --space-64: 64px;
+  --space-80: 80px;
+  --space-96: 96px;
+
+  /* ──────── RADIUS ──────── */
+  --radius-xs:   4px;
+  --radius-s:    8px;
+  --radius-m:    12px;
+  --radius-l:    16px;
+  --radius-xl:   24px;
+  --radius-pill: 999px;
+
+  /* ──────── ELEVATION ──────── */
+  --shadow-level-1: 0 1px 2px 0 rgba(32, 32, 32, 0.06), 0 1px 3px 0 rgba(32, 32, 32, 0.08);
+  --shadow-level-2: 0 4px 8px -2px rgba(32, 32, 32, 0.08), 0 2px 4px -2px rgba(32, 32, 32, 0.06);
+  --shadow-level-3: 0 12px 24px -8px rgba(32, 32, 32, 0.16), 0 4px 8px -4px rgba(32, 32, 32, 0.08);
+  --shadow-focus:   0 0 0 3px rgba(1, 131, 255, 0.32);
+
+  /* ──────── MOTION ──────── */
+  --motion-duration-fast: 120ms;
+  --motion-duration-base: 200ms;
+  --motion-duration-slow: 320ms;
+  --motion-ease-standard: cubic-bezier(0.2, 0.0, 0.0, 1.0);
+
+  /* ──────── COMPATIBILITY ALIASES (for older artifacts) ──────── */
+  /* These bridge previous token names → the canonical Sapien naming */
+  --color-text-primary:    var(--text-neutral-default);
+  --color-text-secondary:  var(--text-neutral-secondary);
+  --color-text-muted:      var(--text-neutral-muted);
+  --color-text-disabled:   var(--text-neutral-disabled);
+  --color-text-on-brand:   var(--text-neutral-onBrand);
+  --color-text-link:       var(--text-neutral-link);
+  --color-bg-canvas:       var(--bg-neutralGrey-light2);
+  --color-bg-surface:      var(--bg-neutralWhite-default);
+  --color-bg-subtle:       var(--gl-charcoal-20);
+  --color-bg-muted:        var(--gl-charcoal-50);
+  --color-border-subtle:   var(--border-primary-subtle);
+  --color-border-default:  var(--border-primary-default);
+  --color-border-strong:   var(--gl-charcoal-300);
+  --color-border-focus:    var(--gl-blue-500);
+  --color-brand-primary:        var(--theme-bg-active);
+  --color-brand-primary-hover:  var(--theme-bg-activeHover);
+  --color-brand-primary-press:  var(--theme-bg-activePressed);
+  --color-brand-soft:           var(--theme-bg-soft);
+  --color-success:       var(--gl-green-500);
+  --color-success-soft:  var(--gl-green-50);
+  --color-warning:       var(--gl-yellow-500);
+  --color-warning-soft:  var(--gl-yellow-50);
+  --color-danger:        var(--gl-red-500);
+  --color-danger-soft:   var(--gl-red-50);
+  --color-info:          var(--gl-blue-500);
+  --color-info-soft:     var(--gl-blue-50);
+  /* legacy ramp aliases */
+  --grey-950: var(--gl-charcoal-700); --grey-900: var(--gl-charcoal-600);
+  --grey-700: var(--gl-charcoal-400); --grey-300: var(--gl-charcoal-200);
+  --grey-200: var(--gl-charcoal-100); --grey-150: var(--gl-charcoal-50);
+  --grey-100: var(--gl-charcoal-20);  --grey-50:  var(--gl-charcoal-10);
+  --blue-700: var(--gl-blue-700); --blue-500: var(--gl-blue-500);
+  --blue-200: var(--gl-blue-200); --blue-100: var(--gl-blue-100);
+  --blue-50:  var(--gl-blue-50);
+  --green-700: var(--gl-green-700); --green-500: var(--gl-green-500); --green-50: var(--gl-green-50);
+  --red-700:   var(--gl-red-700);   --red-500:   var(--gl-red-500);   --red-50:   var(--gl-red-50);
+  --amber-700: var(--gl-yellow-700); --amber-500: var(--gl-yellow-500); --amber-50: var(--gl-yellow-50);
+  --indigo-700: var(--gl-theme-amberBlue-500);
+  --purple-50:  #F1EFFE;
+  --gradient-brand: linear-gradient(135deg, var(--gl-blue-500) 0%, var(--gl-theme-amberBlue-500) 100%);
+}
+
+/* ──────── BASE ──────── */
+*, *::before, *::after { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0;
+  background: var(--bg-neutralGrey-light2);
+  color: var(--text-neutral-default);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body-m);
+  line-height: var(--line-height-body-m);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+::selection { background: var(--gl-blue-100); color: var(--gl-charcoal-700); }
+
+/* Type utilities */
+.t-display  { font: var(--font-weight-medium) var(--font-size-display)/var(--line-height-display) var(--font-family-base); letter-spacing: -0.02em; }
+.t-title-l  { font: var(--font-weight-medium) var(--font-size-title-l)/var(--line-height-title-l) var(--font-family-base); letter-spacing: -0.02em; }
+.t-title-m  { font: var(--font-weight-medium) var(--font-size-title-m)/var(--line-height-title-m) var(--font-family-base); letter-spacing: -0.01em; }
+.t-title-s  { font: var(--font-weight-medium) var(--font-size-title-s)/var(--line-height-title-s) var(--font-family-base); letter-spacing: -0.01em; }
+.t-body-l   { font: var(--font-weight-book)   var(--font-size-body-l)/var(--line-height-body-l)   var(--font-family-base); }
+.t-body-m   { font: var(--font-weight-book)   var(--font-size-body-m)/var(--line-height-body-m)   var(--font-family-base); }
+.t-body-s   { font: var(--font-weight-book)   var(--font-size-body-s)/var(--line-height-body-s)   var(--font-family-base); }
+.t-caption  { font: var(--font-weight-medium) var(--font-size-caption)/var(--line-height-caption) var(--font-family-base); letter-spacing: 0.04em; text-transform: uppercase; }

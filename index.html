@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<template id="__bundler_thumbnail" data-bg-color="#00182E">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#00182E"/>
+    <rect x="468" y="300" width="264" height="200" rx="40" fill="url(#g)"/>
+    <path d="M533 430l50-50 40 40 70-80" fill="none" stroke="#fff" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M650 360h54v54" fill="none" stroke="#fff" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+    <defs>
+      <linearGradient id="g" x1="468" y1="300" x2="732" y2="500" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#01376B"/>
+        <stop offset="1" stop-color="#00A251"/>
+      </linearGradient>
+    </defs>
+  </svg>
+</template>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/sapien-design-system-371b124a-c4fb-4508-945a-305f7ebed3af/tokens.css">
+<script src="_ds/sapien-design-system-371b124a-c4fb-4508-945a-305f7ebed3af/_ds_bundle.js"></script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { background: #fff; }
+  section[id], div[id] { scroll-margin-top: 88px; }
+  @keyframes mhFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+  @keyframes mhFloatB { 0%,100% { transform: translateY(0); } 50% { transform: translateY(10px); } }
+  @keyframes mhPulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: .35; transform: scale(.85); } }
+  .mh-hamburger { display: none; }
+  @media (max-width: 920px) {
+    .mh-navlinks { display: none !important; }
+    .mh-hamburger { display: inline-flex !important; }
+    .mh-hero-grid { grid-template-columns: 1fr !important; }
+    .mh-two { grid-template-columns: 1fr !important; }
+  }
+  @media (max-width: 600px) {
+    .mh-hide-sm { display: none !important; }
+  }
+</style>
+</helmet>
+
+<div id="top" style="--navy: var(--gl-blue-900); --navy2: var(--gl-blue-850); --navy3: var(--gl-blue-800); --emerald: var(--gl-green-500); --emerald-d: var(--gl-green-600); --emerald-soft: var(--gl-green-50); --ink: var(--gl-charcoal-500); --ink2: var(--gl-charcoal-400); --ink3: var(--gl-charcoal-300); --line: var(--gl-charcoal-50); --gold: var(--gl-yellow-500); font-family: var(--font-family-base); color: var(--ink); background: #fff; overflow-x: hidden;">
+
+  <!-- ============ NAV ============ -->
+  <nav style="position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.88); backdrop-filter: saturate(180%) blur(14px); -webkit-backdrop-filter: saturate(180%) blur(14px); border-bottom: 1px solid var(--line);">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+      <a href="#top" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+        <span style="width: 36px; height: 36px; border-radius: 11px; background: linear-gradient(140deg, var(--navy), var(--navy3)); display: inline-flex; align-items: center; justify-content: center; box-shadow: var(--shadow-level-1);">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16l5-5 4 4 7-8"/><path d="M14 7h6v6"/></svg>
+        </span>
+        <span style="font: var(--font-weight-bold) 21px/1 var(--font-family-base); letter-spacing: -0.015em; color: var(--navy);">Mehai<span style="color: var(--emerald);"> Capital</span></span>
+      </a>
+      <div class="mh-navlinks" style="display: flex; align-items: center; gap: 30px;">
+        <a href="#how" style="text-decoration: none; color: var(--ink2); font: var(--font-weight-medium) 15px/1 var(--font-family-base);" style-hover="color: var(--navy);">How it works</a>
+        <a href="#advisors" style="text-decoration: none; color: var(--ink2); font: var(--font-weight-medium) 15px/1 var(--font-family-base);" style-hover="color: var(--navy);">Advisors</a>
+        <a href="#ai" style="text-decoration: none; color: var(--ink2); font: var(--font-weight-medium) 15px/1 var(--font-family-base);" style-hover="color: var(--navy);">AI coach</a>
+        <a href="#tools" style="text-decoration: none; color: var(--ink2); font: var(--font-weight-medium) 15px/1 var(--font-family-base);" style-hover="color: var(--navy);">Tools</a>
+        <a href="#pricing" style="text-decoration: none; color: var(--ink2); font: var(--font-weight-medium) 15px/1 var(--font-family-base);" style-hover="color: var(--navy);">Pricing</a>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <a class="mh-hide-sm" href="#" style="text-decoration: none; color: var(--navy); font: var(--font-weight-medium) 15px/1 var(--font-family-base); padding: 10px 6px;">Log in</a>
+        <a href="#pricing" style="text-decoration: none; background: var(--navy); color: #fff; font: var(--font-weight-medium) 15px/1 var(--font-family-base); padding: 11px 20px; border-radius: var(--radius-pill); box-shadow: var(--shadow-level-1);" style-hover="background: var(--navy2);">Get started</a>
+        <button class="mh-hamburger" onClick="{{ toggleNav }}" style="display: none; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: var(--radius-s); border: 1px solid var(--line); background: #fff; cursor: pointer; color: var(--navy);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+    <sc-if value="{{ navOpen }}" hint-placeholder-val="{{ false }}">
+      <div style="border-top: 1px solid var(--line); background: #fff; padding: 8px 24px 16px; display: flex; flex-direction: column; gap: 4px;">
+        <a href="#how" onClick="{{ closeNav }}" style="text-decoration: none; color: var(--ink); font: var(--font-weight-medium) 16px/1 var(--font-family-base); padding: 12px 4px;">How it works</a>
+        <a href="#advisors" onClick="{{ closeNav }}" style="text-decoration: none; color: var(--ink); font: var(--font-weight-medium) 16px/1 var(--font-family-base); padding: 12px 4px;">Advisors</a>
+        <a href="#ai" onClick="{{ closeNav }}" style="text-decoration: none; color: var(--ink); font: var(--font-weight-medium) 16px/1 var(--font-family-base); padding: 12px 4px;">AI coach</a>
+        <a href="#tools" onClick="{{ closeNav }}" style="text-decoration: none; color: var(--ink); font: var(--font-weight-medium) 16px/1 var(--font-family-base); padding: 12px 4px;">Tools</a>
+        <a href="#pricing" onClick="{{ closeNav }}" style="text-decoration: none; color: var(--ink); font: var(--font-weight-medium) 16px/1 var(--font-family-base); padding: 12px 4px;">Pricing</a>
+      </div>
+    </sc-if>
+  </nav>
+
+  <!-- ============ HERO: MENTOR ============ -->
+  <sc-if value="{{ isMentor }}" hint-placeholder-val="{{ true }}">
+  <header style="position: relative; background: radial-gradient(120% 90% at 85% 0%, var(--gl-blue-10) 0%, #fff 55%);">
+    <div class="mh-hero-grid" style="max-width: 1200px; margin: 0 auto; padding: clamp(40px, 6vw, 88px) 24px clamp(48px, 6vw, 96px); display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(32px, 5vw, 64px); align-items: center;">
+      <div>
+        <span style="display: inline-flex; align-items: center; gap: 8px; background: var(--emerald-soft); color: var(--emerald-d); font: var(--font-weight-medium) 13px/1 var(--font-family-base); letter-spacing: 0.02em; padding: 8px 14px; border-radius: var(--radius-pill);">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 4.9L19 9.8l-4.1 2.9L16 18l-4-2.6L8 18l1.1-5.3L5 9.8l5.1-1.9L12 3z"/></svg>
+          AI-powered wealth platform · Built for India
+        </span>
+        <h1 style="margin: 22px 0 0; font: var(--font-weight-extrabold) clamp(40px, 5.6vw, 66px)/1.04 var(--font-family-base); letter-spacing: -0.03em; color: var(--navy);">Build wealth with <span style="color: var(--emerald-d);">confidence</span>.</h1>
+        <p style="margin: 22px 0 0; max-width: 480px; font: var(--font-weight-book) clamp(17px, 1.5vw, 20px)/1.55 var(--font-family-base); color: var(--ink2);">Connect with SEBI-verified advisors and a patient AI mentor that turns your income, goals and risk comfort into a clear, long-term plan.</p>
+        <div style="margin: 32px 0 0; display: flex; flex-wrap: wrap; gap: 14px;">
+          <a href="#ai" style="text-decoration: none; display: inline-flex; align-items: center; gap: 9px; background: var(--emerald); color: #fff; font: var(--font-weight-medium) 17px/1 var(--font-family-base); padding: 16px 26px; border-radius: var(--radius-pill); box-shadow: var(--shadow-level-2);" style-hover="background: var(--emerald-d);">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.3 7.6L3 20.5l1.4-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg>
+            Talk to AI coach
+          </a>
+          <a href="#advisors" style="text-decoration: none; display: inline-flex; align-items: center; gap: 9px; background: #fff; color: var(--navy); font: var(--font-weight-medium) 17px/1 var(--font-family-base); padding: 16px 26px; border-radius: var(--radius-pill); border: 1.5px solid var(--gl-charcoal-100);" style-hover="border-color: var(--navy);">Find an advisor</a>
+        </div>
+        <div style="margin: 36px 0 0; display: flex; align-items: center; gap: 18px; flex-wrap: wrap;">
+          <div style="display: flex; align-items: center;">
+            <span style="width: 38px; height: 38px; border-radius: 50%; background: var(--navy); color: #fff; display: inline-flex; align-items: center; justify-content: center; font: var(--font-weight-bold) 13px/1 var(--font-family-base); border: 2px solid #fff;">SR</span>
+            <span style="width: 38px; height: 38px; border-radius: 50%; background: var(--emerald); color: #fff; display: inline-flex; align-items: center; justify-content: center; font: var(--font-weight-bold) 13px/1 var(--font-family-base); border: 2px solid #fff; margin-left: -10px;">KM</span>
+            <span style="width: 38px; height: 38px; border-radius: 50%; background: var(--navy3); color: #fff; display: inline-flex; align-items: center; justify-content: center; font: var(--font-weight-bold) 13px/1 var(--font-family-base); border: 2px solid #fff; margin-left: -10px;">FS</span>
+            <span style="width: 38px; height: 38px; border-radius: 50%; background: var(--gl-charcoal-100); color: var(--ink); display: inline-flex; align-items: center; justify-content: center; font: var(--font-weight-bold) 12px/1 var(--font-family-base); border: 2px solid #fff; margin-left: -10px;">12k</span>
+          </div>
+          <div>
+            <div style="color: var(--gold); font: var(--font-weight-bold) 15px/1 var(--font-family-base);">★★★★★</div>
+            <div style="margin-top: 4px; color: var(--ink2); font: var(--font-weight-book) 14px/1.3 var(--font-family-base);">12,000+ investors guided · 4.8 average rating</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- chat card -->
+      <div style="position: relative;">
+        <div style="position: relative; z-index: 2; background: #fff; border: 1px solid var(--line); border-radius: var(--radius-xl); box-shadow: var(--shadow-level-3); padding: 22px; max-width: 440px; margin: 0 auto;">
+          <div style="display: flex; align-items: center; gap: 12px; padding-bottom: 16px; border-bottom: 1px solid var(--line);">
+            <span style="position: relative; width: 46px; height: 46px; border-radius: 50%; background: linear-gradient(140deg, var(--navy), var(--emerald-d)); display: inline-flex; align-items: center; justify-content: center; color: #fff; font: var(--font-weight-bold) 18px/1 var(--font-family-base);">A
+              <span style="position: absolute; right: -1px; bottom: -1px; width: 13px; height: 13px; border-radius: 50%; background: var(--emerald); border: 2px solid #fff;"></span>
+            </span>
+            <div style="flex: 1;">
+              <div style="font: var(--font-weight-bold) 16px/1.2 var(--font-family-base); color: var(--ink);">Arjun</div>
+              <div style="font: var(--font-weight-book) 13px/1.2 var(--font-family-base); color: var(--emerald-d);">Your AI financial mentor · online</div>
+            </div>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 4.9L19 9.8l-4.1 2.9L16 18l-4-2.6L8 18l1.1-5.3L5 9.8l5.1-1.9L12 3z"/></svg>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 12px; padding: 18px 0 4px;">
+            <div style="align-self: flex-end; max-width: 80%; background: var(--gl-blue-10); border: 1px solid var(--gl-blue-50); color: var(--ink); font: var(--font-weight-book) 14px/1.5 var(--font-family-base); padding: 11px 14px; border-radius: 16px 16px 4px 16px;">I have about ₹40,000 left after expenses each month. Where do I start?</div>
+            <div style="align-self: flex-start; max-width: 86%; background: var(--bg-neutralGrey-light2); color: var(--ink); font: var(--font-weight-book) 14px/1.55 var(--font-family-base); padding: 12px 14px; border-radius: 16px 16px 16px 4px;">Wonderful that you're saving so much. Before investing, let's build a safety net — keep <b>6 months of expenses</b> in a liquid fund. Then a ₹15,000 monthly SIP could grow to roughly <b>₹50 lakh in 15 years</b>. No hype, just consistency.</div>
+          </div>
+          <div style="margin-top: 16px; display: flex; align-items: center; gap: 8px; background: var(--bg-neutralGrey-light2); border: 1px solid var(--line); border-radius: var(--radius-pill); padding: 8px 8px 8px 16px;">
+            <span style="flex: 1; color: var(--ink3); font: var(--font-weight-book) 14px/1 var(--font-family-base);">Ask Arjun anything…</span>
+            <span style="width: 36px; height: 36px; border-radius: 50%; background: var(--emerald); display: inline-flex; align-items: center; justify-content: center;">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </div>
+        </div>
+        <div style="position: absolute; top: -22px; right: 8px; z-index: 3; background: #fff; border: 1px solid var(--line); border-radius: var(--radius-m); box-shadow: var(--shadow-level-2); padding: 12px 16px; animation: mhFloat 5s ease-in-out infinite;">
+          <div style="font: var(--font-weight-book) 12px/1 var(--font-family-base); color: var(--ink2);">Financial health</div>
+          <div style="margin-top: 4px; font: var(--font-weight-extrabold) 24px/1 var(--font-family-base); color: var(--emerald-d);">78<span style="font: var(--font-weight-medium) 14px/1 var(--font-family-base); color: var(--ink3);">/100</span></div>
+        </div>
+        <div style="position: absolute; bottom: -20px; left: 0; z-index: 3; background: var(--navy); color: #fff; border-radius: var(--radius-m); box-shadow: var(--shadow-level-3); padding: 12px 16px; animation: mhFloatB 6s ease-in-out infinite;">
+          <div style="font: var(--font-weight-book) 12px/1 var(--font-family-base); color: rgba(255,255,255,0.7);">Projected corpus</div>
+          <div style="margin-top: 4px; font: var(--font-weight-extrabold) 22px/1 var(--font-family-base);">₹50.2 L <span style="font: var(--font-weight-medium) 12px/1 var(--font-family-base); color: var(--gl-green-300);">in 15 yrs</span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  </sc-if>
+
+  <!-- ============ HERO: SPOTLIGHT ============ -->
+  <sc-if value="{{ isSpotlight }}" hint-placeholder-val="{{ false }}">
+  <header style="position: relative; overflow: hidden; background: linear-gradient(160deg, var(--navy) 0%, var(--navy2) 55%, var(--navy3) 100%);">
+    <div style="position: absolute; top: -120px; right: -80px; width: 420px; height: 420px; border-radius: 50%; background: radial-gradient(circle, rgba(0,162,81,0.45), transparent 65%); filter: blur(20px);"></div>
+    <div style="position: absolute; bottom: -160px; left: -100px; width: 460px; height: 460px; border-radius: 50%; background: radial-gradient(circle, rgba(1,131,255,0.35), transparent 65%); filter: blur(20px);"></div>
+    <div style="position: relative; z-index: 2; max-width: 980px; margin: 0 auto; padding: clamp(56px, 7vw, 110px) 24px clamp(40px, 5vw, 80px); text-align: center;">
+      <span style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); color: #fff; font: var(--font-weight-medium) 13px/1 var(--font-family-base); padding: 8px 16px; border-radius: var(--radius-pill);">
+        <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--emerald); animation: mhPulse 2s ease-in-out infinite;"></span>
+        Trusted by 12,000+ Indian investors
+      </span>
+      <h1 style="margin: 26px auto 0; max-width: 800px; font: var(--font-weight-extrabold) clamp(40px, 6.2vw, 74px)/1.02 var(--font-family-base); letter-spacing: -0.03em; color: #fff;">Build wealth with <span style="color: var(--gl-green-300);">confidence</span></h1>
+      <p style="margin: 24px auto 0; max-width: 560px; font: var(--font-weight-book) clamp(17px, 1.6vw, 20px)/1.55 var(--font-family-base); color: rgba(255,255,255,0.78);">A patient AI mentor and SEBI-verified advisors, working together to turn your goals into a clear, long-term plan.</p>
+      <div style="margin: 34px 0 0; display: flex; justify-content: center; flex-wrap: wrap; gap: 14px;">
+        <a href="#ai" style="text-decoration: none; display: inline-flex; align-items: center; gap: 9px; background: var(--emerald); color: #fff; font: var(--font-weight-medium) 17px/1 var(--font-family-base); padding: 16px 28px; border-radius: var(--radius-pill); box-shadow: var(--shadow-level-2);" style-hover="background: var(--emerald-d);">Talk to AI coach</a>
+        <a href="#advisors" style="text-decoration: none; display: inline-flex; align-items: center; gap: 9px; background: rgba(255,255,255,0.08); color: #fff; font: var(--font-weight-medium) 17px/1 var(--font-family-base); padding: 16px 28px; border-radius: var(--radius-pill); border: 1.5px solid rgba(255,255,255,0.28);" style-hover="background: rgba(255,255,255,0.16);">Find an advisor</a>
+      </div>
+    </div>
+    <div style="position: relative; z-index: 2; max-width: 1000px; margin: 0 auto; padding: 0 24px clamp(48px, 6vw, 96px); display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;">
+      <div style="background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.14); border-radius: var(--radius-l); padding: 22px; backdrop-filter: blur(8px); animation: mhFloat 6s ease-in-out infinite;">
+        <div style="font: var(--font-weight-book) 13px/1 var(--font-family-base); color: rgba(255,255,255,0.65);">Net worth tracked</div>
+        <div style="margin-top: 8px; font: var(--font-weight-extrabold) 30px/1 var(--font-family-base); color: #fff;">₹24.5 L</div>
+        <div style="margin-top: 6px; font: var(--font-weight-medium) 13px/1 var(--font-family-base); color: var(--gl-green-300);">▲ 14.2% this year</div>
+      </div>
+      <div style="background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.14); border-radius: var(--radius-l); padding: 22px; backdrop-filter: blur(8px); animation: mhFloatB 7s ease-in-out infinite;">
+        <div style="font: var(--font-weight-book) 13px/1 var(--font-family-base); color: rgba(255,255,255,0.65);">Retirement goal</div>
+        <div style="margin-top: 8px; font: var(--font-weight-extrabold) 30px/1 var(--font-family-base); color: #fff;">82%</div>
+        <div style="margin-top: 10px; height: 7px; border-radius: 999px; background: rgba(255,255,255,0.15);"><span style="display: block; width: 82%; height: 100%; border-radius: 999px; background: var(--emerald);"></span></div>
+      </div>
+      <div style="background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.14); border-radius: var(--radius-l); padding: 22px; backdrop-filter: blur(8px); animation: mhFloat 5.5s ease-in-out infinite;">
+        <div style="font: var(--font-weight-book) 13px/1 var(--font-family-base); color: rgba(255,255,255,0.65);">Monthly SIP</div>
+        <div style="margin-top: 8px; font: var(--font-weight-extrabold) 30px/1 var(--font-family-base); color: #fff;">₹15,000</div>
+        <div style="margin-top: 6px; font: var(--font-weight-medium) 13px/1 var(--font-family-base); color: rgba(255,255,255,0.7);">Across 3 funds</div>
+      </div>
+    </div>
+  </header>
+  </sc-if>
+
+  <!-- ============ HERO: EDITORIAL ============ -->
+  <sc-if value="{{ isEditorial }}" hint-placeholder-val="{{ false }}">
+  <header style="position: relative; background: #fff;">
+    <div class="mh-hero-grid" style="max-width: 1200px; margin: 0 auto; padding: clamp(40px, 6vw, 92px) 24px clamp(48px, 6vw, 96px); display: grid; grid-template-columns: 1.1fr 0.9fr; gap: clamp(32px, 5vw, 56px); align-items: center;">
+      <div>
+        <span style="display: inline-flex; align-items: center; gap: 8px; color: var(--ink3); font: var(--font-weight-medium) 12px/1 var(--font-family-base); letter-spacing: 0.12em; text-transform: uppercase;">For India's retail investors</span>
+        <h1 style="margin: 18px 0 0; font: var(--font-weight-extrabold) clamp(44px, 6.4vw, 76px)/1.0 var(--font-family-base); letter-spacing: -0.035em; color: var(--navy);">Build wealth<br>with <span style="position: relative; color: var(--navy); white-space: nowrap;">confidence<span style="position: absolute; left: 0; right: 0; bottom: 6px; height: 14px; background: var(--emerald); opacity: 0.28; z-index: -1; border-radius: 4px;"></span></span></h1>
+        <p style="margin: 26px 0 0; max-width: 460px; font: var(--font-weight-book) clamp(17px, 1.5vw, 20px)/1.6 var(--font-family-base); color: var(--ink2);">A patient AI mentor meets SEBI-verified advisors — so every rupee you invest has a plan behind it.</p>
+        <div style="margin: 32px 0 0; display: flex; flex-wrap: wrap; gap: 14px;">
+          <a href="#ai" style="text-decoration: none; display: inline-flex; align-items: center; gap: 9px; background: var(--navy); color: #fff; font: var(--font-weight-medium) 17px/1 var(--font-family-base); padding: 16px 26px; border-radius: var(--radius-pill); box-shadow: var(--shadow-level-2);" style-hover="background: var(--navy2);">Talk to AI coach</a>
+          <a href="#advisors" style="text-decoration: none; display: inline-flex; align-items: center; gap: 9px; background: var(--emerald-soft); color: var(--emerald-d); font: var(--font-weight-medium) 17px/1 var(--font-family-base); padding: 16px 26px; border-radius: var(--radius-pill);" style-hover="background: #d6efe1;">Find an advisor</a>
+        </div>
+        <div style="margin: 40px 0 0; display: flex; gap: 36px; flex-wrap: wrap;">
+          <div><div style="font: var(--font-weight-extrabold) 30px/1 var(--font-family-base); color: var(--navy);">850+</div><div style="margin-top: 4px; font: var(--font-weight-book) 14px/1.3 var(--font-family-base); color: var(--ink2);">verified advisors</div></div>
+          <div><div style="font: var(--font-weight-extrabold) 30px/1 var(--font-family-base); color: var(--navy);">₹2,400 Cr</div><div style="margin-top: 4px; font: var(--font-weight-book) 14px/1.3 var(--font-family-base); color: var(--ink2);">advised on platform</div></div>
+          <div><div style="font: var(--font-weight-extrabold) 30px/1 var(--font-family-base); color: var(--navy);">4.8★</div><div style="margin-top: 4px; font: var(--font-weight-book) 14px/1.3 var(--font-family-base); color: var(--ink2);">average rating</div></div>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <div style="background: #fff; border: 1px solid var(--line); border-radius: var(--radius-l); box-shadow: var(--shadow-level-2); padding: 18px; display: flex; align-items: center; gap: 14px;">
+          <span style="width: 48px; height: 48px; border-radius: 50%; background: var(--navy); color: #fff; display: inline-flex; align-items: center; justify-content: center; font: var(--font-weight-bold) 16px/1 var(--font-family-base);">AI</span>
+          <div style="flex: 1;"><div style="font: var(--font-weight-bold) 15px/1.2 var(--font-family-base); color: var(--ink);">Ananya Iyer</div><div style="font: var(--font-weight-book) 13px/1.3 var(--font-family-base); color: var(--ink2);">SEBI RIA · Mumbai · 12 yrs</div></div>
+          <span style="display: inline-flex; align-items: center; gap: 4px; color: var(--emerald-d); font: var(--font-weight-medium) 13px/1 var(--font-family-base);"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>Verified</span>
+        </div>
+        <div style="background: var(--navy); color: #fff; border-radius: var(--radius-l); box-shadow: var(--shadow-level-2); padding: 22px;">
+          <div style="font: var(--font-weight-book) 13px/1 var(--font-family-base); color: rgba(255,255,255,0.7);">Your financial health</div>
+          <div style="margin-top: 10px; display: flex; align-items: flex-end; gap: 8px;"><span style="font: var(--font-weight-extrabold) 44px/0.9 var(--font-family-base);">78</span><span style="font: var(--font-weight-medium) 16px/1 var(--font-family-base); color: rgba(255,255,255,0.6); padding-bottom: 4px;">/ 100 · Good</span></div>
+          <div style="margin-top: 16px; height: 8px; border-radius: 999px; background: rgba(255,255,255,0.15);"><span style="display: block; width: 78%; height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--gl-green-300), var(--emerald));"></span></div>
+        </div>
+        <div style="background: var(--emerald-soft); border: 1px solid #cdeede; border-radius: var(--radius-l); padding: 18px; display: flex; align-items: center; gap: 14px;">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="var(--emerald-d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 7-8"/><path d="M14 7h6v6"/></svg>
+          <div><div style="font: var(--font-weight-bold) 16px/1.2 var(--font-family-base); color: var(--emerald-d);">₹50.2 L corpus</div><div style="font: var(--font-weight-book) 13px/1.3 var(--font-family-base); color: var(--ink2);">₹15k SIP · 15 years · 12% p.a.</div></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  </sc-if>
+
+  <!-- ============ TRUST STRIP ============ -->
+  <section style="border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--bg-neutralGrey-light2);">
+    <div style="max-width: 1100px; margin: 0 auto; padding: 28px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px; text-align: center;">
+      <div><div style="font: var(--font-weight-extrabold) 28px/1 var(--font-family-base); color: var(--navy);">12,000+</div><div style="margin-top: 6px; font: var(--font-weight-book) 14px/1.3 var(--font-family-base); color: var(--ink2);">investors guided</div></div>
+      <div><div style="font: var(--font-weight-extrabold) 28px/1 var(--font-family-base); color: var(--navy);">850+</div><div style="margin-top: 6px; font: var(--font-weight-book) 14px/1.3 var(--font-family-base); color: var(--ink2);">SEBI-verified advisors</div></div>
+      <div><div style="font: var(--font-weight-extrabold) 28px/1 var(--font-family-base); color: var(--navy);">₹2,400 Cr+</div><div style="margin-top: 6px; font: var(--font-weight-book) 14px/1.3 var(--font-family-base); color: var(--ink2);">advised on platform</div></div>
+      <div><div style="font: var(--font-weight-extrabold) 28px/1 var(--font-family-base); color: var(--navy);">22 languages</div><div style="margin-top: 6px; font: var(--font-weight-book) 14px/1.3 var(--font-family-base); color: var(--ink2);">spoken by advisors</div></div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section id="how" style="max-width: 1200px; margin: 0 auto; padding: clamp(56px, 7vw, 104px) 24px;">
+    <div style="text-align: center; max-width: 640px; margin: 0 auto;">
+      <span style="color: var(--emerald-d); font: var(--font-weight-medium) 12px/1 var(--font-family-base); letter-spacing: 0.12em; text-transform: uppercase;">How it works</span>
+      <h2 style="margin: 14px 0 0; font: var(--font-weight-extrabold) clamp(30px, 3.6vw, 44px)/1.1 var(--font-family-base); letter-spacing: -0.025em; color: var(--navy);">From confused to confident in four steps</h2>
+      <p style="margin: 16px 0 0; font: var(--font-weight-book) 17px/1.6 var(--font-family-base); color: var(--ink2);">No jargon, no pressure. Just a clear path from your first question to a plan you can act on.</p>
+    </div>
+    <div style="margin: 48px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
+      <sc-for list="{{ steps }}" as="step" hint-placeholder-count="4">
+        <div style="background: #fff; border: 1px solid var(--line); border-radius: var(--radius-l); padding: 28px; box-shadow: var(--shadow-level-1);">
+          <span style="display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; border-radius: var(--radius-m); background: var(--emerald-soft); color: var(--emerald-d); font: var(--font-weight-extrabold) 18px/1 var(--font-family-base);">{{ step.n }}</span>
+          <h3 style="margin: 20px 0 0; font: var(--font-weight-bold) 19px/1.3 var(--font-family-base); color: var(--ink);">{{ step.t }}</h3>
+          <p style="margin: 10px 0 0; font: var(--font-weight-book) 15px/1.55 var(--font-family-base); color: var(--ink2);">{{ step.d }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ============ ADVISOR MARKETPLACE ============ -->
+  <section id="advisors" style="background: var(--bg-neutralGrey-light2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+    <div style="max-width: 1200px; margin: 0 auto; padding: clamp(56px, 7vw, 104px) 24px;">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+        <div style="max-width: 560px;">
+          <span style="color: var(--emerald-d); font: var(--font-weight-medium) 12px/1 var(--font-family-base); letter-spacing: 0.12em; text-transform: uppercase;">Advisor marketplace</span>
+          <h2 style="margin: 14px 0 0; font: var(--font-weight-extrabold) clamp(30px, 3.6vw, 44px)/1.1 var(--font-family-base); letter-spacing: -0.025em; color: var(--navy);">Compare verified advisors, then book</h2>
+          <p style="margin: 16px 0 0; font: var(--font-weight-book) 17px/1.6 var(--font-family-base); color: var(--ink2);">Every advisor is KYC-checked and SEBI-validated. Filter by specialisation, language and budget — then chat, call or book a video consultation.</p>
+        </div>
+        <a href="#" style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px; color: var(--navy); font: var(--font-weight-medium) 15px/1 var(--font-family-base); padding: 12px 0;">Browse all 850 advisors
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <div style="margin: 28px 0 0; display: flex; gap: 10px; flex-wrap: wrap;">
+        <sc-for list="{{ filters }}" as="chip" hint-placeholder-count="7">
+          <button onClick="{{ chip.onClick }}" style="{{ chip.style }}">{{ chip.label }}</button>
+        </sc-for>
+      </div>
+
+      <div style="margin: 28px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 20px;">
+        <sc-for list="{{ filteredAdvisors }}" as="adv" hint-placeholder-count="6">
+          <div style="background: #fff; border: 1px solid var(--line); border-radius: var(--radius-l); padding: 22px; box-shadow: var(--shadow-level-1); display: flex; flex-direction: column;">
+            <div style="display: flex; align-items: center; gap: 14px;">
+              <span style="width: 52px; height: 52px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: #fff; font: var(--font-weight-bold) 18px/1 var(--font-family-base); background: {{ adv.accent }};">{{ adv.initials }}</span>
+              <div style="flex: 1; min-width: 0;">
+                <div style="display: flex; align-items: center; gap: 6px;">
+                  <span style="font: var(--font-weight-bold) 17px/1.2 var(--font-family-base); color: var(--ink);">{{ adv.name }}</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald-d)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+                </div>
+                <div style="margin-top: 3px; font: var(--font-weight-book) 13px/1.3 var(--font-family-base); color: var(--ink2);">{{ adv.catLabel }}</div>
+              </div>
+              <div style="text-align: right;">
+                <div style="color: var(--gold); font: var(--font-weight-bold) 14px/1 var(--font-family-base);">★ {{ adv.rating }}</div>
+                <div style="margin-top: 3px; font: var(--font-weight-book) 12px/1 var(--font-family-base); color: var(--ink3);">{{ adv.reviews }} reviews</div>
+              </div>
+            </div>
+            <div style="margin: 16px 0 0; display: flex; flex-wrap: wrap; gap: 6px;">
+              <sc-for list="{{ adv.specs }}" as="spec" hint-placeholder-count="2">
+                <span style="background: var(--gl-blue-10); color: var(--navy3); font: var(--font-weight-medium) 12px/1 var(--font-family-base); padding: 6px 11px; border-radius: var(--radius-pill);">{{ spec }}</span>
+              </sc-for>
+            </div>
+            <div style="margin: 18px 0 0; padding: 16px 0 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+              <div><div style="font: var(--font-weight-book) 12px/1 var(--font-family-base); color: var(--ink3);">Experience</div><div style="margin-top: 4px; font: var(--font-weight-medium) 14px/1 var(--font-family-base); color: var(--ink);">{{ adv.exp }} · {{ adv.city }}</div></div>
+              <div><div style="font: var(--font-weight-book) 12px/1 var(--font-family-base); color: var(--ink3);">Assets advised</div><div style="margin-top: 4px; font: var(--font-weight-medium) 14px/1 var(--font-family-base); color: var(--ink);">{{ adv.aum }}</div></div>
+              <div><div style="font: var(--font-weight-book) 12px/1 var(--font-family-base); color: var(--ink3);">Languages</div><div style="margin-top: 4px; font: var(--font-weight-medium) 14px/1 var(--font-family-base); color: var(--ink);">{{ adv.langStr }}</div></div>
+              <div><div style="font: var(--font-weight-book) 12px/1 var(--font-family-base); color: var(--ink3);">Consultation</div><div style="margin-top: 4px; font: var(--font-weight-bold) 14px/1 var(--font-family-base); color: var(--navy);">{{ adv.fee }}<span style="font: var(--font-weight-book) 12px/1 var(--font-family-base); color: var(--ink3);"> /session</span></div></div>
+            </div>
+            <div style="margin: 18px 0 0; display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+              <span style="display: inline-flex; align-items: center; gap: 6px; color: var(--emerald-d); font: var(--font-weight-medium) 13px/1 var(--font-family-base);"><span style="width: 7px; height: 7px; border-radius: 50%; background: var(--emerald);"></span>{{ adv.avail }}</span>
+              <span style="background: var(--navy); color: #fff; font: var(--font-weight-medium) 14px/1 var(--font-family-base); padding: 11px 20px; border-radius: var(--radius-pill); cursor: pointer;" style-hover="background: var(--navy2);">Book consultation</span>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AI MENTOR ============ -->
+  <section id="ai" style="max-width: 1200px; margin: 0 auto; padding: clamp(56px, 7vw, 104px) 24px;">
+    <div style="text-align: center; max-width: 660px; margin: 0 auto;">
+      <span style="color: var(--emerald-d); font: var(--font-weight-medium) 12px/1 var(--font-family-base); letter-spacing: 0.12em; text-transform: uppercase;">Meet Arjun, your AI coach</span>
+      <h2 style="margin: 14px 0 0; font: var(--font-weight-extrabold) clamp(30px, 3.6vw, 44px)/1.1 var(--font-family-base); letter-spacing: -0.025em; color: var(--navy);">A patient mentor, not a stock tipster</h2>
+      <p style="margin: 16px 0 0; font: var(--font-weight-book) 17px/1.6 var(--font-family-base); color: var(--ink2);">Arjun thinks like a trusted family elder who happens to understand money — calm, practical and focused on the long term. No hype, no get-rich-quick noise.</p>
+      <div style="margin: 22px 0 0; display: flex; justify-content: center; flex-wrap: wrap; gap: 8px;">
+        <span style="background: var(--emerald-soft); color: var(--emerald-d); font: var(--font-weight-medium) 13px/1 var(--font-family-base); padding: 8px 14px; border-radius: var(--radius-pill);">Patient</span>
+        <span style="background: var(--emerald-soft); color: var(--emerald-d); font: var(--font-weight-medium) 13px/1 var(--font-family-base); padding: 8px 14px; border-radius: var(--radius-pill);">Practical</span>
+        <span style="background: var(--emerald-soft); color: var(--emerald-d); font: var(--font-weight-medium) 13px/1 var(--font-family-base); padding: 8px 14px; border-radius: var(--radius-pill);">Long-term</span>
+        <span style="background: var(--emerald-soft); color: var(--emerald-d); font: var(--font-weight-medium) 13px/1 var(--font-family-base); padding: 8px 14px; border-radius: var(--radius-pill);">No hype</span>
+      </div>
+    </div>
+
+    <div class="mh-two" style="margin: 48px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start;">
+      <!-- conversation -->
+      <div style="background: linear-gradient(165deg, var(--navy) 0%, var(--navy2) 100%); border-radius: var(--radius-xl); padding: 26px; box-shadow: var(--shadow-level-3);">
+        <div style="display: flex; align-items: center; gap: 12px; padding-bottom: 18px; border-bottom: 1px solid rgba(255,255,255,0.12);">
+          <span style="position: relative; width: 46px; height: 46px; border-radius: 50%; background: linear-gradient(140deg, var(--emerald), var(--gl-green-300)); display: inline-flex; align-items: center; justify-content: center; color: var(--navy); font: var(--font-weight-extrabold) 18px/1 var(--font-family-base);">A
+            <span style="position: absolute; right: -1px; bottom: -1px; width: 13px; height: 13px; border-radius: 50%; background: var(--emerald); border: 2px solid var(--navy);"></span>
+          </span>
+          <div><div style="font: var(--font-weight-bold) 16px/1.2 var(--font-family-base); color: #fff;">Arjun</div><div style="font: var(--font-weight-book) 13px/1.2 var(--font-family-base); color: var(--gl-green-300);">online · replies instantly</div></div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px; padding-top: 18px;">
+          <div style="align-self: flex-end; max-width: 82%; background: rgba(255,255,255,0.12); color: #fff; font: var(--font-weight-book) 14px/1.55 var(--font-family-base); padding: 12px 15px; border-radius: 16px 16px 4px 16px;">I have ₹40,000 left after expenses each month. Where do I start?</div>
+          <div style="align-self: flex-start; max-width: 88%; background: #fff; color: var(--ink); font: var(--font-weight-book) 14px/1.6 var(--font-family-base); padding: 12px 15px; border-radius: 16px 16px 16px 4px;">Wonderful that you're saving so much. Before investing, let's build a <b>safety net</b> — 6 months of expenses in a liquid fund. What do you spend monthly?</div>
+          <div style="align-self: flex-end; max-width: 82%; background: rgba(255,255,255,0.12); color: #fff; font: var(--font-weight-book) 14px/1.55 var(--font-family-base); padding: 12px 15px; border-radius: 16px 16px 4px 16px;">Around ₹35,000.</div>
+          <div style="align-self: flex-start; max-width: 88%; background: #fff; color: var(--ink); font: var(--font-weight-book) 14px/1.6 var(--font-family-base); padding: 12px 15px; border-radius: 16px 16px 16px 4px;">Then aim for a <b>₹2.1 lakh</b> emergency fund first. After that, a ₹15,000 SIP split across an index fund and a flexi-cap could grow to about <b>₹50 lakh in 15 years</b>. Shall I build your full plan?</div>
+        </div>
+        <div style="margin-top: 18px; display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.16); border-radius: var(--radius-pill); padding: 8px 8px 8px 16px;">
+          <span style="flex: 1; color: rgba(255,255,255,0.55); font: var(--font-weight-book) 14px/1 var(--font-family-base);">Yes, build my plan…</span>
+          <span style="width: 36px; height: 36px; border-radius: 50%; background: var(--emerald); display: inline-flex; align-items: center; justify-content: center;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </div>
+
+      <!-- feature tiles -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+        <div style="background: #fff; border: 1px solid var(--line); border-radius: var(--radius-l); padding: 22px; box-shadow: var(--shadow-level-1);">
+          <span style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: var(--radius-m); background: var(--gl-blue-10); color: var(--navy3);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6l7-3z"/></svg></span>
+          <h3 style="margin: 16px 0 0; font: var(--font-weight-bold) 17px/1.3 var(--font-family-base); color: var(--ink);">Financial planning</h3>
+          <p style="margin: 8px 0 0; font: var(--font-weight-book) 14px/1.5 var(--font-family-base); color: var(--ink2);">A health score, emergency-fund target, insurance gaps and a retirement projection.</p>
+        </div>
+        <div style="background: #fff; border: 1px solid var(--line); border-radius: var(--radius-l); padding: 22px; box-shadow: var(--shadow-level-1);">
+          <span style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: var(--radius-m); background: var(--emerald-soft); color: var(--emerald-d);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 7-8"/><path d="M14 7h6v6"/></svg></span>
+          <h3 style="margin: 16px 0 0; font: var(--font-weight-bold) 17px/1.3 var(--font-family-base); color: var(--ink);">Portfolio review</h3>
+          <p style="margin: 8px 0 0; font: var(--font-weight-book) 14px/1.5 var(--font-family-base); color: var(--ink2);">Upload statements for a diversification, risk and rebalancing check.</p>
+        </div>
+        <div style="background: #fff; border: 1px solid var(--line); border-radius: var(--radius-l); padding: 22px; box-shadow: var(--shadow-level-1);">
+          <span style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: var(--radius-m); background: var(--gl-blue-10); color: var(--navy3);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></span>
+          <h3 style="margin: 16px 0 0; font: var(--font-weight-bold) 17px/1.3 var(--font-family-base); color: var(--ink);">Goal planning</h3>
+          <p style="margin: 8px 0 0; font: var(--font-weight-book) 14px/1.5 var(--font-family-base); color: var(--ink2);">Home, education or retirement — know the exact SIP you need to get there.</p>
+        </div>
+        <div style="background: #fff; border: 1px solid var(--line); border-radius: var(--radius-l); padding: 22px; box-shadow: var(--shadow-level-1);">
+          <span style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: var(--radius-m); background: var(--emerald-soft); color: var(--emerald-d);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h13v15H6a2 2 0 0 0-2 2V5z"/><path d="M19 18H6"/></svg></span>
+          <h3 style="margin: 16px 0 0; font: var(--font-weight-bold) 17px/1.3 var(--font-family-base); color: var(--ink);">Investor education</h3>
+          <p style="margin: 8px 0 0; font: var(--font-weight-book) 14px/1.5 var(--font-family-base); color: var(--ink2);">SIPs, mutual funds, ETFs and tax — explained with simple Indian examples.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINANCIAL TOOLS / SIP CALC ============ -->
+  <section id="tools" style="background: linear-gradient(165deg, var(--navy) 0%, var(--navy2) 100%); position: relative; overflow: hidden;">
+    <div style="position: absolute; top: -120px; left: -80px; width: 360px; height: 360px; border-radius: 50%; background: radial-gradient(circle, rgba(0,162,81,0.3), transparent 65%); filter: blur(20px);"></div>
+    <div class="mh-two" style="position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; padding: clamp(56px, 7vw, 104px) 24px; display: grid; grid-template-columns: 0.95fr 1.05fr; gap: clamp(32px, 5vw, 64px); align-items: center;">
+      <div>
+        <span style="color: var(--gl-green-300); font: var(--font-weight-medium) 12px/1 var(--font-family-base); letter-spacing: 0.12em; text-transform: uppercase;">Financial tools</span>
+        <h2 style="margin: 14px 0 0; font: var(--font-weight-extrabold) clamp(30px, 3.6vw, 44px)/1.1 var(--font-family-base); letter-spacing: -0.025em; color: #fff;">See what consistency can build</h2>
+        <p style="margin: 16px 0 0; font: var(--font-weight-book) 17px/1.6 var(--font-family-base); color: rgba(255,255,255,0.78);">Try the SIP calculator. Move the sliders to see how a steady monthly investment can compound over time — the same maths Arjun uses to plan your goals.</p>
+        <div style="margin: 26px 0 0; display: flex; gap: 10px; flex-wrap: wrap;">
+          <span style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.16); color: #fff; font: var(--font-weight-medium) 13px/1 var(--font-family-base); padding: 9px 14px; border-radius: var(--radius-pill);">SIP calculator</span>
+          <span style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.16); color: rgba(255,255,255,0.7); font: var(--font-weight-medium) 13px/1 var(--font-family-base); padding: 9px 14px; border-radius: var(--radius-pill);">Goal planner</span>
+          <span style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.16); color: rgba(255,255,255,0.7); font: var(--font-weight-medium) 13px/1 var(--font-family-base); padding: 9px 14px; border-radius: var(--radius-pill);">Retirement projection</span>
+        </div>
+      </div>
+
+      <div style="background: #fff; border-radius: var(--radius-xl); padding: clamp(24px, 3vw, 36px); box-shadow: var(--shadow-level-3);">
+        <div style="display: flex; align-items: baseline; justify-content: space-between;">
+          <span style="font: var(--font-weight-bold) 18px/1 var(--font-family-base); color: var(--ink);">SIP calculator</span>
+          <span style="font: var(--font-weight-book) 13px/1 var(--font-family-base); color: var(--ink3);">Assumes 12% p.a. returns</span>
+        </div>
+        <div style="margin: 26px 0 0;">
+          <div style="display: flex; align-items: baseline; justify-content: space-between;">
+            <label style="font: var(--font-weight-medium) 14px/1 var(--font-family-base); color: var(--ink2);">Monthly investment</label>
+            <span style="font: var(--font-weight-extrabold) 20px/1 var(--font-family-base); color: var(--navy);">{{ sipMonthlyLabel }}</span>
+          </div>
+          <input type="range" min="1000" max="100000" step="500" value="{{ sipMonthly }}" onInput="{{ onSipMonthly }}" style="width: 100%; margin-top: 14px; accent-color: var(--emerald); height: 6px; cursor: pointer;">
+        </div>
+        <div style="margin: 24px 0 0;">
+          <div style="display: flex; align-items: baseline; justify-content: space-between;">
+            <label style="font: var(--font-weight-medium) 14px/1 var(--font-family-base); color: var(--ink2);">Time horizon</label>
+            <span style="font: var(--font-weight-extrabold) 20px/1 var(--font-family-base); color: var(--navy);">{{ sipYears }} years</span>
+          </div>
+          <input type="range" min="1" max="30" step="1" value="{{ sipYears }}" onInput="{{ onSipYears }}" style="width: 100%; margin-top: 14px; accent-color: var(--emerald); height: 6px; cursor: pointer;">
+        </div>
+        <div style="margin: 28px 0 0; padding: 24px; border-radius: var(--radius-l); background: linear-gradient(140deg, var(--emerald-soft), var(--gl-blue-10)); text-align: center;">
+          <div style="font: var(--font-weight-medium) 13px/1 var(--font-family-base); color: var(--ink2);">Estimated corpus</div>
+          <div style="margin: 8px 0 0; font: var(--font-weight-extrabold) clamp(38px, 5vw, 52px)/1 var(--font-family-base); letter-spacing: -0.02em; color: var(--emerald-d);">{{ sipCorpus }}</div>
+          <div style="margin: 18px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+            <div style="background: rgba(255,255,255,0.7); border-radius: var(--radius-m); padding: 12px;"><div style="font: var(--font-weight-book) 12px/1 var(--font-family-base); color: var(--ink2);">You invest</div><div style="margin-top: 5px; font: var(--font-weight-bold) 18px/1 var(--font-family-base); color: var(--navy);">{{ sipInvested }}</div></div>
+            <div style="background: rgba(255,255,255,0.7); border-radius: var(--radius-m); padding: 12px;"><div style="font: var(--font-weight-book) 12px/1 var(--font-family-base); color: var(--ink2);">Est. gains</div><div style="margin-top: 5px; font: var(--font-weight-bold) 18px/1 var(--font-family-base); color: var(--emerald-d);">{{ sipGains }}</div></div>
+          </div>
+        </div>
+        <p style="margin: 14px 0 0; font: var(--font-weight-book) 12px/1.45 var(--font-family-base); color: var(--ink3); text-align: center;">For illustration only. Mutual fund returns are not guaranteed and are subject to market risks.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SUCCESS STORIES ============ -->
+  <section style="max-width: 1200px; margin: 0 auto; padding: clamp(56px, 7vw, 104px) 24px;">
+    <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+      <span style="color: var(--emerald-d); font: var(--font-weight-medium) 12px/1 var(--font-family-base); letter-spacing: 0.12em; text-transform: uppercase;">Success stories</span>
+      <h2 style="margin: 14px 0 0; font: var(--font-weight-extrabold) clamp(30px, 3.6vw, 44px)/1.1 var(--font-family-base); letter-spacing: -0.025em; color: var(--navy);">Real investors, real plans</h2>
+    </div>
+    <div style="margin: 44px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 20px;">
+      <sc-for list="{{ testimonials }}" as="t" hint-placeholder-count="3">
+        <div style="background: #fff; border: 1px solid var(--line); border-radius: var(--radius-l); padding: 28px; box-shadow: var(--shadow-level-1); display: flex; flex-direction: column;">
+          <div style="color: var(--gold); font: var(--font-weight-bold) 15px/1 var(--font-family-base);">★★★★★</div>
+          <p style="margin: 16px 0 0; flex: 1; font: var(--font-weight-book) 16px/1.6 var(--font-family-base); color: var(--ink);">{{ t.quote }}</p>
+          <div style="margin: 22px 0 0; display: flex; align-items: center; gap: 12px;">
+            <span style="width: 44px; height: 44px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: #fff; font: var(--font-weight-bold) 15px/1 var(--font-family-base); background: {{ t.accent }};">{{ t.initials }}</span>
+            <div><div style="font: var(--font-weight-bold) 15px/1.2 var(--font-family-base); color: var(--ink);">{{ t.name }}</div><div style="margin-top: 2px; font: var(--font-weight-book) 13px/1.2 var(--font-family-base); color: var(--ink2);">{{ t.role }}</div></div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ============ PRICING ============ -->
+  <section id="pricing" style="background: var(--bg-neutralGrey-light2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+    <div style="max-width: 1200px; margin: 0 auto; padding: clamp(56px, 7vw, 104px) 24px;">
+      <div style="text-align: center; max-width: 620px; margin: 0 auto;">
+        <span style="color: var(--emerald-d); font: var(--font-weight-medium) 12px/1 var(--font-family-base); letter-spacing: 0.12em; text-transform: uppercase;">Pricing</span>
+        <h2 style="margin: 14px 0 0; font: var(--font-weight-extrabold) clamp(30px, 3.6vw, 44px)/1.1 var(--font-family-base); letter-spacing: -0.025em; color: var(--navy);">Start free. Upgrade when you're ready</h2>
+        <p style="margin: 16px 0 0; font: var(--font-weight-book) 17px/1.6 var(--font-family-base); color: var(--ink2);">Browsing advisors and the basic AI coach are always free. Advisors set their own consultation fees.</p>
+      </div>
+      <div style="margin: 48px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; align-items: stretch;">
+        <!-- Starter -->
+        <div style="background: #fff; border: 1px solid var(--line); border-radius: var(--radius-l); padding: 30px; box-shadow: var(--shadow-level-1); display: flex; flex-direction: column;">
+          <h3 style="margin: 0; font: var(--font-weight-bold) 19px/1 var(--font-family-base); color: var(--ink);">Starter</h3>
+          <div style="margin: 14px 0 0; font: var(--font-weight-extrabold) 40px/1 var(--font-family-base); color: var(--navy);">Free</div>
+          <p style="margin: 10px 0 0; font: var(--font-weight-book) 14px/1.5 var(--font-family-base); color: var(--ink2);">For first-time investors getting their bearings.</p>
+          <div style="margin: 22px 0 0; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+            <div style="display: flex; gap: 10px; align-items: flex-start;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--emerald-d)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px;"><path d="M20 6L9 17l-5-5"/></svg><span style="font: var(--font-weight-book) 15px/1.4 var(--font-family-base); color: var(--ink);">AI financial health score</span></div>
+            <div style="display: flex; gap: 10px; align-items: flex-start;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--emerald-d)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px;"><path d="M20 6L9 17l-5-5"/></svg><span style="font: var(--font-weight-book) 15px/1.4 var(--font-family-base); color: var(--ink);">Browse all verified advisors</span></div>
+            <div style="display: flex; gap: 10px; align-items: flex-start;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--emerald-d)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px;"><path d="M20 6L9 17l-5-5"/></svg><span style="font: var(--font-weight-book) 15px/1.4 var(--font-family-base); color: var(--ink);">5 AI coach chats per day</span></div>
+            <div style="display: flex; gap: 10px; align-items: flex-start;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--emerald-d)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px;"><path d="M20 6L9 17l-5-5"/></svg><span style="font: var(--font-weight-book) 15px/1.4 var(--font-family-base); color: var(--ink);">Goal tracker</span></div>
+          </div>
+          <a href="#" style="margin-top: 26px; text-decoration: none; text-align: center; background: #fff; color: var(--navy); border: 1.5px solid var(--gl-charcoal-100); font: var(--font-weight-medium) 15px/1 var(--font-family-base); padding: 14px; border-radius: var(--radius-pill);" style-hover="border-color: var(--navy);">Get started free</a>
+        </div>
+        <!-- Premium (highlighted) -->
+        <div style="background: var(--navy); border: 1px solid var(--navy); border-radius: var(--radius-l); padding: 30px; box-shadow: var(--shadow-level-3); display: flex; flex-direction: column; position: relative;">
+          <span style="position: absolute; top: 22px; right: 22px; background: var(--emerald); color: #fff; font: var(--font-weight-medium) 12px/1 var(--font-family-base); padding: 7px 12px; border-radius: var(--radius-pill);">Most popular</span>
+          <h3 style="margin: 0; font: var(--font-weight-bold) 19px/1 var(--font-family-base); color: #fff;">Premium</h3>
+          <div style="margin: 14px 0 0; display: flex; align-items: baseline; gap: 6px;"><span style="font: var(--font-weight-extrabold) 40px/1 var(--font-family-base); color: #fff;">₹499</span><span style="font: var(--font-weight-book) 15px/1 var(--font-family-base); color: rgba(255,255,255,0.6);">/month</span></div>
+          <p style="margin: 10px 0 0; font: var(--font-weight-book) 14px/1.5 var(--font-family-base); color: rgba(255,255,255,0.7);">For investors serious about a plan.</p>
+          <div style="margin: 22px 0 0; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+            <div style="display: flex; gap: 10px; align-items: flex-start;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gl-green-300)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px;"><path d="M20 6L9 17l-5-5"/></svg><span style="font: var(--font-weight-book) 15px/1.4 var(--font-family-base); color: #fff;">Unlimited AI coach</span></div>
+            <div style="display: flex; gap: 10px; align-items: flex-start;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gl-green-300)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px;"><path d="M20 6L9 17l-5-5"/></svg><span style="font: var(--font-weight-book) 15px/1.4 var(--font-family-base); color: #fff;">Portfolio review &amp; rebalancing</span></div>
+            <div style="display: flex; gap: 10px; align-items: flex-start;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gl-green-300)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px;"><path d="M20 6L9 17l-5-5"/></svg><span style="font: var(--font-weight-book) 15px/1.4 var(--font-family-base); color: #fff;">All financial tools</span></div>
+            <div style="display: flex; gap: 10px; align-items: flex-start;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gl-green-300)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px;"><path d="M20 6L9 17l-5-5"/></svg><span style="font: var(--font-weight-book) 15px/1.4 var(--font-family-base); color: #fff;">Priority advisor matching</span></div>
+          </div>
+          <a href="#" style="margin-top: 26px; text-decoration: none; text-align: center; background: var(--emerald); color: #fff; font: var(--font-weight-medium) 15px/1 var(--font-family-base); padding: 14px; border-radius: var(--radius-pill);" style-hover="background: var(--emerald-d);">Start 14-day trial</a>
+        </div>
+        <!-- Wealth -->
+        <div style="background: #fff; border: 1px solid var(--line); border-radius: var(--radius-l); padding: 30px; box-shadow: var(--shadow-level-1); display: flex; flex-direction: column;">
+          <h3 style="margin: 0; font: var(--font-weight-bold) 19px/1 var(--font-family-base); color: var(--ink);">Wealth</h3>
+          <div style="margin: 14px 0 0; display: flex; align-items: baseline; gap: 6px;"><span style="font: var(--font-weight-extrabold) 40px/1 var(--font-family-base); color: var(--navy);">₹1,499</span><span style="font: var(--font-weight-book) 15px/1 var(--font-family-base); color: var(--ink3);">/month</span></div>
+          <p style="margin: 10px 0 0; font: var(--font-weight-book) 14px/1.5 var(--font-family-base); color: var(--ink2);">For a guided, advisor-backed journey.</p>
+          <div style="margin: 22px 0 0; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+            <div style="display: flex; gap: 10px; align-items: flex-start;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--emerald-d)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px;"><path d="M20 6L9 17l-5-5"/></svg><span style="font: var(--font-weight-book) 15px/1.4 var(--font-family-base); color: var(--ink);">Everything in Premium</span></div>
+            <div style="display: flex; gap: 10px; align-items: flex-start;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--emerald-d)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px;"><path d="M20 6L9 17l-5-5"/></svg><span style="font: var(--font-weight-book) 15px/1.4 var(--font-family-base); color: var(--ink);">Quarterly advisor consultation</span></div>
+            <div style="display: flex; gap: 10px; align-items: flex-start;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--emerald-d)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px;"><path d="M20 6L9 17l-5-5"/></svg><span style="font: var(--font-weight-book) 15px/1.4 var(--font-family-base); color: var(--ink);">Secure document vault</span></div>
+            <div style="display: flex; gap: 10px; align-items: flex-start;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--emerald-d)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px;"><path d="M20 6L9 17l-5-5"/></svg><span style="font: var(--font-weight-book) 15px/1.4 var(--font-family-base); color: var(--ink);">Dedicated roadmap reviews</span></div>
+          </div>
+          <a href="#" style="margin-top: 26px; text-decoration: none; text-align: center; background: #fff; color: var(--navy); border: 1.5px solid var(--gl-charcoal-100); font: var(--font-weight-medium) 15px/1 var(--font-family-base); padding: 14px; border-radius: var(--radius-pill);" style-hover="border-color: var(--navy);">Choose Wealth</a>
+        </div>
+      </div>
+      <p style="margin: 28px 0 0; text-align: center; font: var(--font-weight-book) 14px/1.5 var(--font-family-base); color: var(--ink2);">Are you an advisor? <a href="#" style="color: var(--navy); font-weight: var(--font-weight-medium); text-decoration: none;">Join free</a> and pay only for qualified leads.</p>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section style="max-width: 800px; margin: 0 auto; padding: clamp(56px, 7vw, 104px) 24px;">
+    <div style="text-align: center;">
+      <span style="color: var(--emerald-d); font: var(--font-weight-medium) 12px/1 var(--font-family-base); letter-spacing: 0.12em; text-transform: uppercase;">FAQs</span>
+      <h2 style="margin: 14px 0 0; font: var(--font-weight-extrabold) clamp(30px, 3.6vw, 44px)/1.1 var(--font-family-base); letter-spacing: -0.025em; color: var(--navy);">Questions, answered plainly</h2>
+    </div>
+    <div style="margin: 40px 0 0; display: flex; flex-direction: column; gap: 12px;">
+      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="5">
+        <div style="background: #fff; border: 1px solid var(--line); border-radius: var(--radius-m); overflow: hidden;">
+          <button onClick="{{ f.onToggle }}" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 22px; background: transparent; border: 0; cursor: pointer; text-align: left;">
+            <span style="font: var(--font-weight-bold) 16px/1.4 var(--font-family-base); color: var(--ink);">{{ f.q }}</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="{{ f.chevronStyle }}"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
+            <p style="margin: 0; padding: 0 22px 22px; font: var(--font-weight-book) 15px/1.6 var(--font-family-base); color: var(--ink2);">{{ f.a }}</p>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section style="max-width: 1200px; margin: 0 auto; padding: 0 24px clamp(56px, 7vw, 96px);">
+    <div style="position: relative; overflow: hidden; border-radius: var(--radius-xl); background: linear-gradient(135deg, var(--navy) 0%, var(--navy3) 60%, var(--emerald-d) 130%); padding: clamp(40px, 6vw, 76px); text-align: center;">
+      <div style="position: absolute; top: -80px; right: -40px; width: 280px; height: 280px; border-radius: 50%; background: radial-gradient(circle, rgba(0,162,81,0.4), transparent 65%); filter: blur(16px);"></div>
+      <div style="position: relative; z-index: 2;">
+        <h2 style="margin: 0 auto; max-width: 620px; font: var(--font-weight-extrabold) clamp(30px, 4vw, 48px)/1.1 var(--font-family-base); letter-spacing: -0.025em; color: #fff;">Start building wealth with confidence</h2>
+        <p style="margin: 18px auto 0; max-width: 520px; font: var(--font-weight-book) 17px/1.6 var(--font-family-base); color: rgba(255,255,255,0.8);">Your AI mentor is ready in seconds. Verified advisors are one click away. It's free to begin.</p>
+        <div style="margin: 32px 0 0; display: flex; justify-content: center; flex-wrap: wrap; gap: 14px;">
+          <a href="#ai" style="text-decoration: none; background: #fff; color: var(--navy); font: var(--font-weight-medium) 17px/1 var(--font-family-base); padding: 16px 28px; border-radius: var(--radius-pill); box-shadow: var(--shadow-level-2);" style-hover="background: var(--bg-neutralGrey-light2);">Talk to your AI coach</a>
+          <a href="#advisors" style="text-decoration: none; background: rgba(255,255,255,0.1); color: #fff; font: var(--font-weight-medium) 17px/1 var(--font-family-base); padding: 16px 28px; border-radius: var(--radius-pill); border: 1.5px solid rgba(255,255,255,0.3);" style-hover="background: rgba(255,255,255,0.2);">Find an advisor</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="background: var(--gl-charcoal-700); color: rgba(255,255,255,0.7);">
+    <div style="max-width: 1200px; margin: 0 auto; padding: clamp(48px, 6vw, 72px) 24px 40px;">
+      <div style="display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 32px;" class="mh-foot-grid">
+        <div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="width: 32px; height: 32px; border-radius: 9px; background: linear-gradient(140deg, var(--gl-blue-500), var(--emerald)); display: inline-flex; align-items: center; justify-content: center;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16l5-5 4 4 7-8"/><path d="M14 7h6v6"/></svg></span>
+            <span style="font: var(--font-weight-bold) 19px/1 var(--font-family-base); color: #fff;">Mehai Capital</span>
+          </div>
+          <p style="margin: 16px 0 0; max-width: 280px; font: var(--font-weight-book) 14px/1.6 var(--font-family-base); color: rgba(255,255,255,0.55);">The trusted digital bridge between India's retail investors and qualified financial advisors.</p>
+        </div>
+        <div>
+          <div style="font: var(--font-weight-bold) 14px/1 var(--font-family-base); color: #fff;">Product</div>
+          <div style="margin-top: 16px; display: flex; flex-direction: column; gap: 12px;">
+            <a href="#ai" style="text-decoration: none; color: rgba(255,255,255,0.6); font: var(--font-weight-book) 14px/1 var(--font-family-base);" style-hover="color: #fff;">AI coach</a>
+            <a href="#advisors" style="text-decoration: none; color: rgba(255,255,255,0.6); font: var(--font-weight-book) 14px/1 var(--font-family-base);" style-hover="color: #fff;">Advisor marketplace</a>
+            <a href="#tools" style="text-decoration: none; color: rgba(255,255,255,0.6); font: var(--font-weight-book) 14px/1 var(--font-family-base);" style-hover="color: #fff;">Financial tools</a>
+            <a href="#pricing" style="text-decoration: none; color: rgba(255,255,255,0.6); font: var(--font-weight-book) 14px/1 var(--font-family-base);" style-hover="color: #fff;">Pricing</a>
+          </div>
+        </div>
+        <div>
+          <div style="font: var(--font-weight-bold) 14px/1 var(--font-family-base); color: #fff;">Advisors</div>
+          <div style="margin-top: 16px; display: flex; flex-direction: column; gap: 12px;">
+            <a href="#" style="text-decoration: none; color: rgba(255,255,255,0.6); font: var(--font-weight-book) 14px/1 var(--font-family-base);" style-hover="color: #fff;">Join as advisor</a>
+            <a href="#" style="text-decoration: none; color: rgba(255,255,255,0.6); font: var(--font-weight-book) 14px/1 var(--font-family-base);" style-hover="color: #fff;">Verification process</a>
+            <a href="#" style="text-decoration: none; color: rgba(255,255,255,0.6); font: var(--font-weight-book) 14px/1 var(--font-family-base);" style-hover="color: #fff;">Advisor login</a>
+          </div>
+        </div>
+        <div>
+          <div style="font: var(--font-weight-bold) 14px/1 var(--font-family-base); color: #fff;">Company</div>
+          <div style="margin-top: 16px; display: flex; flex-direction: column; gap: 12px;">
+            <a href="#" style="text-decoration: none; color: rgba(255,255,255,0.6); font: var(--font-weight-book) 14px/1 var(--font-family-base);" style-hover="color: #fff;">About</a>
+            <a href="#" style="text-decoration: none; color: rgba(255,255,255,0.6); font: var(--font-weight-book) 14px/1 var(--font-family-base);" style-hover="color: #fff;">Blog</a>
+            <a href="#" style="text-decoration: none; color: rgba(255,255,255,0.6); font: var(--font-weight-book) 14px/1 var(--font-family-base);" style-hover="color: #fff;">Privacy &amp; security</a>
+            <a href="#" style="text-decoration: none; color: rgba(255,255,255,0.6); font: var(--font-weight-book) 14px/1 var(--font-family-base);" style-hover="color: #fff;">Contact</a>
+          </div>
+        </div>
+      </div>
+      <div style="margin: 40px 0 0; padding: 24px 0 0; border-top: 1px solid rgba(255,255,255,0.12);">
+        <p style="margin: 0; font: var(--font-weight-book) 12px/1.7 var(--font-family-base); color: rgba(255,255,255,0.45);"><b style="color: rgba(255,255,255,0.6);">Disclaimer:</b> Mehai Capital is a technology platform. Our AI coach, calculators and educational content are provided for informational and educational purposes only and do not constitute investment advice. Personalised investment advice is provided solely by SEBI-registered investment advisers you choose to engage. Advisor credentials and SEBI registration are verified during onboarding. Mutual fund and securities investments are subject to market risks — read all scheme-related documents carefully. Past performance is not indicative of future returns. Your data is encrypted and never sold.</p>
+        <div style="margin: 20px 0 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+          <span style="font: var(--font-weight-book) 13px/1 var(--font-family-base); color: rgba(255,255,255,0.4);">© 2026 Mehai Capital Technologies Pvt. Ltd. All rights reserved.</span>
+          <div style="display: flex; gap: 20px;">
+            <a href="#" style="text-decoration: none; color: rgba(255,255,255,0.4); font: var(--font-weight-book) 13px/1 var(--font-family-base);" style-hover="color: #fff;">Terms</a>
+            <a href="#" style="text-decoration: none; color: rgba(255,255,255,0.4); font: var(--font-weight-book) 13px/1 var(--font-family-base);" style-hover="color: #fff;">Privacy</a>
+            <a href="#" style="text-decoration: none; color: rgba(255,255,255,0.4); font: var(--font-weight-book) 13px/1 var(--font-family-base);" style-hover="color: #fff;">Disclosures</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;heroVariant&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;mentor&quot;,&quot;spotlight&quot;,&quot;editorial&quot;],&quot;default&quot;:&quot;mentor&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = {
+    sipMonthly: 15000,
+    sipYears: 15,
+    faqOpen: 0,
+    filter: 'All',
+    navOpen: false,
+  };
+
+  fmtShort(n) {
+    if (n >= 10000000) return '\u20b9' + (n / 10000000).toFixed(2).replace(/\.?0+$/, '') + ' Cr';
+    if (n >= 100000)   return '\u20b9' + (n / 100000).toFixed(1).replace(/\.0$/, '') + ' L';
+    return '\u20b9' + Math.round(n).toLocaleString('en-IN');
+  }
+
+  renderVals() {
+    const heroVariant = this.props.heroVariant || 'mentor';
+
+    // ---- SIP calculator ----
+    const i = 0.12 / 12;
+    const n = this.state.sipYears * 12;
+    const P = this.state.sipMonthly;
+    const corpus = P * ((Math.pow(1 + i, n) - 1) / i) * (1 + i);
+    const invested = P * n;
+    const gains = corpus - invested;
+
+    // ---- advisors ----
+    const advisorsRaw = [
+      { name: 'Ananya Iyer', cat: 'SEBI RIA', catLabel: 'SEBI Registered Investment Advisor', city: 'Mumbai', exp: '12 yrs', fee: '\u20b92,500', rating: '4.9', reviews: '212', aum: '\u20b9180 Cr', langs: ['Hindi', 'English', 'Marathi'], specs: ['Retirement', 'Tax planning'], avail: 'Available today', initials: 'AI', accent: 'var(--navy)' },
+      { name: 'Rajesh Menon', cat: 'Mutual Funds', catLabel: 'Mutual Fund Distributor', city: 'Kochi', exp: '9 yrs', fee: '\u20b91,500', rating: '4.8', reviews: '164', aum: '\u20b995 Cr', langs: ['English', 'Malayalam', 'Hindi'], specs: ['SIP strategy', 'Goal planning'], avail: 'Available tomorrow', initials: 'RM', accent: 'var(--emerald)' },
+      { name: 'Priya Deshpande', cat: 'Wealth Mgmt', catLabel: 'Wealth Manager', city: 'Pune', exp: '15 yrs', fee: '\u20b94,000', rating: '4.9', reviews: '308', aum: '\u20b9420 Cr', langs: ['Hindi', 'English'], specs: ['HNI portfolios', 'Estate'], avail: 'Books this week', initials: 'PD', accent: 'var(--navy3)' },
+      { name: 'Vikram Singh', cat: 'Tax', catLabel: 'Tax Consultant', city: 'New Delhi', exp: '11 yrs', fee: '\u20b92,000', rating: '4.7', reviews: '98', aum: '\u20b960 Cr', langs: ['Hindi', 'English', 'Punjabi'], specs: ['Capital gains', 'ITR filing'], avail: 'Available today', initials: 'VS', accent: 'var(--emerald-d)' },
+      { name: 'Meera Nair', cat: 'Retirement', catLabel: 'Retirement Planner', city: 'Bengaluru', exp: '8 yrs', fee: '\u20b91,800', rating: '4.8', reviews: '140', aum: '\u20b972 Cr', langs: ['English', 'Tamil', 'Kannada'], specs: ['NPS', 'Pension'], avail: 'Available tomorrow', initials: 'MN', accent: 'var(--navy)' },
+      { name: 'Arjun Khanna', cat: 'Insurance', catLabel: 'Insurance Specialist', city: 'Gurugram', exp: '10 yrs', fee: '\u20b91,200', rating: '4.6', reviews: '76', aum: '\u20b940 Cr', langs: ['Hindi', 'English'], specs: ['Term life', 'Health'], avail: 'Books this week', initials: 'AK', accent: 'var(--emerald)' },
+    ];
+    const advisors = advisorsRaw.map(a => ({ ...a, langStr: a.langs.join(', ') }));
+    const filter = this.state.filter;
+    const filteredAdvisors = filter === 'All' ? advisors : advisors.filter(a => a.cat === filter);
+
+    const filterLabels = ['All', 'SEBI RIA', 'Mutual Funds', 'Wealth Mgmt', 'Tax', 'Retirement', 'Insurance'];
+    const chipBase = 'padding: 10px 18px; border-radius: var(--radius-pill); font: var(--font-weight-medium) 14px/1 var(--font-family-base); cursor: pointer; white-space: nowrap; transition: all 150ms;';
+    const filters = filterLabels.map(label => ({
+      label,
+      onClick: () => this.setState({ filter: label }),
+      style: chipBase + (label === filter
+        ? ' background: var(--navy); color: #fff; border: 1.5px solid var(--navy);'
+        : ' background: #fff; color: var(--ink2); border: 1.5px solid var(--line);'),
+    }));
+
+    // ---- steps ----
+    const steps = [
+      { n: '01', t: 'Create your profile', d: 'Share your age, income, goals and risk comfort. Takes about 2 minutes.' },
+      { n: '02', t: 'Meet your AI coach', d: 'Get an instant financial health score and a starter plan you actually understand.' },
+      { n: '03', t: 'Compare verified advisors', d: 'We match you with SEBI-verified experts who fit your goals, language and budget.' },
+      { n: '04', t: 'Book and get your roadmap', d: 'Talk, plan and act on a personalised, long-term wealth roadmap.' },
+    ];
+
+    // ---- testimonials ----
+    const testimonials = [
+      { quote: 'Mehai\u2019s AI coach gave me a plan I actually understood. I started my first SIP within a week.', name: 'Sneha Reddy', role: 'Software engineer · Hyderabad', initials: 'SR', accent: 'var(--navy)' },
+      { quote: 'I compared five advisors in an afternoon and found one who speaks Tamil. Booking was effortless.', name: 'Karthik Subramanian', role: 'Doctor · Chennai', initials: 'KS', accent: 'var(--emerald)' },
+      { quote: 'Retirement always felt abstract. Now I know my exact number and how to reach it, step by step.', name: 'Farah Sheikh', role: 'Teacher · Lucknow', initials: 'FS', accent: 'var(--navy3)' },
+    ];
+
+    // ---- faqs ----
+    const faqData = [
+      { q: 'Is Mehai Capital giving me investment advice?', a: 'Our AI coach, calculators and content are for education and information only. Personalised investment advice is provided solely by the SEBI-registered advisors you choose to engage on the platform.' },
+      { q: 'How are advisors verified?', a: 'Every advisor completes KYC, and we validate their SEBI registration, certifications and credentials before they appear in the marketplace. Look for the verified badge on each profile.' },
+      { q: 'Is my financial data safe?', a: 'Your documents are encrypted and stored in a private vault. We never sell your data, and you control exactly what each advisor can see and when.' },
+      { q: 'What does it cost to use Mehai?', a: 'Browsing advisors and the basic AI coach are free. Premium AI features and consultations are paid, and advisors set their own consultation fees upfront.' },
+      { q: 'How does the AI coach actually work?', a: 'It asks about your income, goals and risk comfort, then generates a financial health score and a starter roadmap using long-term, low-hype investing principles.' },
+    ];
+    const faqs = faqData.map((f, idx) => ({
+      q: f.q,
+      a: f.a,
+      open: this.state.faqOpen === idx,
+      onToggle: () => this.setState(s => ({ faqOpen: s.faqOpen === idx ? -1 : idx })),
+      chevronStyle: 'flex-shrink: 0; transition: transform 200ms; transform: rotate(' + (this.state.faqOpen === idx ? '180deg' : '0deg') + ');',
+    }));
+
+    return {
+      heroVariant,
+      isMentor: heroVariant === 'mentor',
+      isSpotlight: heroVariant === 'spotlight',
+      isEditorial: heroVariant === 'editorial',
+      sipMonthly: this.state.sipMonthly,
+      sipYears: this.state.sipYears,
+      sipMonthlyLabel: this.fmtShort(this.state.sipMonthly),
+      sipCorpus: this.fmtShort(corpus),
+      sipInvested: this.fmtShort(invested),
+      sipGains: this.fmtShort(gains),
+      onSipMonthly: e => this.setState({ sipMonthly: Number(e.target.value) }),
+      onSipYears: e => this.setState({ sipYears: Number(e.target.value) }),
+      filters,
+      filteredAdvisors,
+      steps,
+      testimonials,
+      faqs,
+      navOpen: this.state.navOpen,
+      toggleNav: () => this.setState(s => ({ navOpen: !s.navOpen })),
+      closeNav: () => this.setState({ navOpen: false }),
+    };
+  }
+}
+</script>
+</body>
+</html>
